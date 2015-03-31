@@ -1,0 +1,2 @@
+Delete all files of the LightShaft system Older than version 1.5 before downloading the latest version.
+starting from 1.5 the system contains new content and code, any traces of old code can corrupt your LightShaft instalation.

@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: 3d27c7c8163cd48ab87ffb9d9a2a67fb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: chocolateKnot_Thick
+    100002: cookiePlate
+    100004: cookiesPlateSmall
+    100006: crumpet
+    100008: crumpet 1
+    100010: crumpet001
+    100012: crumpet002
+    100014: crumpet003
+    100016: crumpet004
+    100018: crumpet005
+    100020: crumpet006
+    100022: crumpet007
+    100024: crumpet008
+    100026: crumpet009
+    100028: crumpet010
+    100030: crumpet011
+    100032: crumpet012
+    100034: crumpet013
+    100036: crumpet014
+    100038: crumpet015
+    100040: crumpet016
+    100042: crumpet017
+    100044: crumpet018
+    100046: crumpet019
+    100048: crumpet020
+    100050: crumpet021
+    100052: crumpet022
+    100054: crumpet023
+    100056: crumpet024
+    100058: crumpet025
+    100060: crumpet026
+    100062: crumpet027
+    100064: crumpetsFloat
+    100066: crumpetsFloatPlate
+    100068: crumpetsPlate
+    100070: Cylinder152
+    100072: Cylinder153
+    100074: floatingCookies
+    100076: icingBottom
+    100078: icingSliceBottom03
+    100080: icingSliceTop
+    100082: icingSliceTop01
+    100084: icingSliceTop02
+    100086: icingSliceTop04
+    100088: layer4
+    100090: PsliceTop04
+    100092: saucer
+    100094: saucer001
+    100096: saucer002
+    100098: saucer003
+    100100: saucer004
+    100102: saucer005
+    100104: Slice01
+    100106: slice01
+    100108: Slice02
+    100110: Slice03
+    100112: Slice04
+    100114: Slice05
+    100116: sliceBottom
+    100118: sliceBottom01
+    100120: sliceBottom02
+    100122: sliceBottom03
+    100124: sliceBottom03 1
+    100126: sliceBottom04
+    100128: sliceMid
+    100130: sliceMid01
+    100132: sliceMid02
+    100134: sliceMid03
+    100136: sliceMid04
+    100138: sliceTop
+    100140: sliceTop01
+    100142: SliceTop03
+    100144: Strawberries
+    100146: Strawberry
+    100148: Strawberry001
+    100150: Strawberry002
+    100152: Strawberry003
+    100154: teaCup
+    100156: teaCup001
+    100158: teaCup002
+    100160: Teapot001
+    100162: //RootNode
+    100164: transform1
+    100166: transform10
+    100168: transform11
+    100170: transform12
+    100172: transform13
+    100174: transform14
+    100176: transform15
+    100178: transform16
+    100180: transform17
+    100182: transform18
+    100184: transform19
+    100186: transform2
+    100188: transform20
+    100190: transform21
+    100192: transform22
+    100194: transform23
+    100196: transform24
+    100198: transform25
+    100200: transform26
+    100202: transform27
+    100204: transform28
+    100206: transform29
+    100208: transform3
+    100210: transform30
+    100212: transform31
+    100214: transform32
+    100216: transform33
+    100218: transform4
+    100220: transform5
+    100222: transform6
+    100224: transform7
+    100226: transform8
+    100228: transform9
+    400000: chocolateKnot_Thick
+    400002: cookiePlate
+    400004: cookiesPlateSmall
+    400006: crumpet
+    400008: crumpet 1
+    400010: crumpet001
+    400012: crumpet002
+    400014: crumpet003
+    400016: crumpet004
+    400018: crumpet005
+    400020: crumpet006
+    400022: crumpet007
+    400024: crumpet008
+    400026: crumpet009
+    400028: crumpet010
+    400030: crumpet011
+    400032: crumpet012
+    400034: crumpet013
+    400036: crumpet014
+    400038: crumpet015
+    400040: crumpet016
+    400042: crumpet017
+    400044: crumpet018
+    400046: crumpet019
+    400048: crumpet020
+    400050: crumpet021
+    400052: crumpet022
+    400054: crumpet023
+    400056: crumpet024
+    400058: crumpet025
+    400060: crumpet026
+    400062: crumpet027
+    400064: crumpetsFloat
+    400066: crumpetsFloatPlate
+    400068: crumpetsPlate
+    400070: Cylinder152
+    400072: Cylinder153
+    400074: floatingCookies
+    400076: icingBottom
+    400078: icingSliceBottom03
+    400080: icingSliceTop
+    400082: icingSliceTop01
+    400084: icingSliceTop02
+    400086: icingSliceTop04
+    400088: layer4
+    400090: PsliceTop04
+    400092: saucer
+    400094: saucer001
+    400096: saucer002
+    400098: saucer003
+    400100: saucer004
+    400102: saucer005
+    400104: Slice01
+    400106: slice01
+    400108: Slice02
+    400110: Slice03
+    400112: Slice04
+    400114: Slice05
+    400116: sliceBottom
+    400118: sliceBottom01
+    400120: sliceBottom02
+    400122: sliceBottom03
+    400124: sliceBottom03 1
+    400126: sliceBottom04
+    400128: sliceMid
+    400130: sliceMid01
+    400132: sliceMid02
+    400134: sliceMid03
+    400136: sliceMid04
+    400138: sliceTop
+    400140: sliceTop01
+    400142: SliceTop03
+    400144: Strawberries
+    400146: Strawberry
+    400148: Strawberry001
+    400150: Strawberry002
+    400152: Strawberry003
+    400154: teaCup
+    400156: teaCup001
+    400158: teaCup002
+    400160: Teapot001
+    400162: //RootNode
+    400164: transform1
+    400166: transform10
+    400168: transform11
+    400170: transform12
+    400172: transform13
+    400174: transform14
+    400176: transform15
+    400178: transform16
+    400180: transform17
+    400182: transform18
+    400184: transform19
+    400186: transform2
+    400188: transform20
+    400190: transform21
+    400192: transform22
+    400194: transform23
+    400196: transform24
+    400198: transform25
+    400200: transform26
+    400202: transform27
+    400204: transform28
+    400206: transform29
+    400208: transform3
+    400210: transform30
+    400212: transform31
+    400214: transform32
+    400216: transform33
+    400218: transform4
+    400220: transform5
+    400222: transform6
+    400224: transform7
+    400226: transform8
+    400228: transform9
+    2300000: chocolateKnot_Thick
+    2300002: cookiePlate
+    2300004: crumpetsFloat
+    2300006: crumpetsFloatPlate
+    2300008: crumpetsPlate
+    2300010: Cylinder152
+    2300012: Cylinder153
+    2300014: icingBottom
+    2300016: icingSliceBottom03
+    2300018: icingSliceTop
+    2300020: icingSliceTop01
+    2300022: icingSliceTop02
+    2300024: icingSliceTop04
+    2300026: layer4
+    2300028: PsliceTop04
+    2300030: saucer
+    2300032: saucer001
+    2300034: saucer002
+    2300036: saucer003
+    2300038: saucer004
+    2300040: saucer005
+    2300042: sliceBottom
+    2300044: sliceBottom01
+    2300046: sliceBottom02
+    2300048: sliceBottom03
+    2300050: sliceBottom03 1
+    2300052: sliceBottom04
+    2300054: sliceMid
+    2300056: sliceMid01
+    2300058: sliceMid02
+    2300060: sliceMid03
+    2300062: sliceMid04
+    2300064: sliceTop
+    2300066: sliceTop01
+    2300068: SliceTop03
+    2300070: Strawberries
+    2300072: teaCup
+    2300074: teaCup001
+    2300076: teaCup002
+    2300078: Teapot001
+    3300000: chocolateKnot_Thick
+    3300002: cookiePlate
+    3300004: crumpetsFloat
+    3300006: crumpetsFloatPlate
+    3300008: crumpetsPlate
+    3300010: Cylinder152
+    3300012: Cylinder153
+    3300014: icingBottom
+    3300016: icingSliceBottom03
+    3300018: icingSliceTop
+    3300020: icingSliceTop01
+    3300022: icingSliceTop02
+    3300024: icingSliceTop04
+    3300026: layer4
+    3300028: PsliceTop04
+    3300030: saucer
+    3300032: saucer001
+    3300034: saucer002
+    3300036: saucer003
+    3300038: saucer004
+    3300040: saucer005
+    3300042: sliceBottom
+    3300044: sliceBottom01
+    3300046: sliceBottom02
+    3300048: sliceBottom03
+    3300050: sliceBottom03 1
+    3300052: sliceBottom04
+    3300054: sliceMid
+    3300056: sliceMid01
+    3300058: sliceMid02
+    3300060: sliceMid03
+    3300062: sliceMid04
+    3300064: sliceTop
+    3300066: sliceTop01
+    3300068: SliceTop03
+    3300070: Strawberries
+    3300072: teaCup
+    3300074: teaCup001
+    3300076: teaCup002
+    3300078: Teapot001
+    4300000: Cylinder153
+    4300002: saucer
+    4300004: teaCup
+    4300006: teaCup001
+    4300008: saucer001
+    4300010: teaCup002
+    4300012: saucer002
+    4300014: Teapot001
+    4300016: cookiePlate
+    4300018: Cylinder152
+    4300020: saucer004
+    4300022: saucer005
+    4300024: SliceTop03
+    4300026: icingSliceBottom03
+    4300028: sliceMid03
+    4300030: sliceBottom03
+    4300032: sliceTop
+    4300034: icingSliceTop
+    4300036: sliceMid
+    4300038: sliceBottom
+    4300040: saucer003
+    4300042: sliceBottom04
+    4300044: icingSliceTop04
+    4300046: sliceMid04
+    4300048: PsliceTop04
+    4300050: sliceTop01
+    4300052: icingSliceTop01
+    4300054: sliceMid01
+    4300056: sliceBottom01
+    4300058: layer4
+    4300060: chocolateKnot_Thick
+    4300062: icingBottom
+    4300064: sliceMid02
+    4300066: icingSliceTop02
+    4300068: sliceBottom02
+    4300070: sliceBottom03
+    4300072: crumpetsFloat
+    4300074: crumpetsFloatPlate
+    4300076: crumpetsPlate
+    4300078: Strawberries
+    7400000: TeaAnimation
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: TeaAnimation
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 320
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: crumpetsFloat
+        weight: 1
+      - path: crumpetsFloatPlate
+        weight: 1
+      - path: crumpetsPlate
+        weight: 1
+      - path: Cylinder153
+        weight: 1
+      - path: Cylinder153/chocolateKnot_Thick
+        weight: 1
+      - path: Cylinder153/cookiePlate
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet024
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet024/transform7
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet025
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet025/transform6
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet026
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet026/transform9
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet027
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/crumpet027/transform8
+        weight: 1
+      - path: Cylinder153/cookiesPlateSmall/saucer003
+        weight: 1
+      - path: Cylinder153/crumpet
+        weight: 1
+      - path: Cylinder153/crumpet/transform27
+        weight: 1
+      - path: Cylinder153/crumpet 1
+        weight: 1
+      - path: Cylinder153/crumpet 1/transform28
+        weight: 1
+      - path: Cylinder153/crumpet001
+        weight: 1
+      - path: Cylinder153/crumpet001/transform29
+        weight: 1
+      - path: Cylinder153/crumpet002
+        weight: 1
+      - path: Cylinder153/crumpet002/transform26
+        weight: 1
+      - path: Cylinder153/crumpet003
+        weight: 1
+      - path: Cylinder153/crumpet003/transform19
+        weight: 1
+      - path: Cylinder153/crumpet004
+        weight: 1
+      - path: Cylinder153/crumpet004/transform20
+        weight: 1
+      - path: Cylinder153/crumpet005
+        weight: 1
+      - path: Cylinder153/crumpet005/transform10
+        weight: 1
+      - path: Cylinder153/crumpet006
+        weight: 1
+      - path: Cylinder153/crumpet006/transform11
+        weight: 1
+      - path: Cylinder153/crumpet007
+        weight: 1
+      - path: Cylinder153/crumpet007/transform18
+        weight: 1
+      - path: Cylinder153/crumpet008
+        weight: 1
+      - path: Cylinder153/crumpet008/transform24
+        weight: 1
+      - path: Cylinder153/crumpet009
+        weight: 1
+      - path: Cylinder153/crumpet009/transform16
+        weight: 1
+      - path: Cylinder153/crumpet010
+        weight: 1
+      - path: Cylinder153/crumpet010/transform22
+        weight: 1
+      - path: Cylinder153/crumpet011
+        weight: 1
+      - path: Cylinder153/crumpet011/transform23
+        weight: 1
+      - path: Cylinder153/crumpet012
+        weight: 1
+      - path: Cylinder153/crumpet012/transform15
+        weight: 1
+      - path: Cylinder153/crumpet013
+        weight: 1
+      - path: Cylinder153/crumpet013/transform14
+        weight: 1
+      - path: Cylinder153/crumpet014
+        weight: 1
+      - path: Cylinder153/crumpet014/transform13
+        weight: 1
+      - path: Cylinder153/crumpet015
+        weight: 1
+      - path: Cylinder153/crumpet015/transform12
+        weight: 1
+      - path: Cylinder153/crumpet016
+        weight: 1
+      - path: Cylinder153/crumpet016/transform25
+        weight: 1
+      - path: Cylinder153/crumpet017
+        weight: 1
+      - path: Cylinder153/crumpet017/transform17
+        weight: 1
+      - path: Cylinder153/crumpet018
+        weight: 1
+      - path: Cylinder153/crumpet018/transform21
+        weight: 1
+      - path: Cylinder153/Cylinder152
+        weight: 1
+      - path: Cylinder153/floatingCookies
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet019
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet019/transform3
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet020
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet020/transform1
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet021
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet021/transform5
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet022
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet022/transform4
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet023
+        weight: 1
+      - path: Cylinder153/floatingCookies/crumpet023/transform2
+        weight: 1
+      - path: Cylinder153/icingBottom
+        weight: 1
+      - path: Cylinder153/layer4
+        weight: 1
+      - path: Cylinder153/saucer
+        weight: 1
+      - path: Cylinder153/saucer001
+        weight: 1
+      - path: Cylinder153/saucer002
+        weight: 1
+      - path: Cylinder153/saucer004
+        weight: 1
+      - path: Cylinder153/saucer005
+        weight: 1
+      - path: Cylinder153/Slice01
+        weight: 1
+      - path: Cylinder153/Slice01/slice01
+        weight: 1
+      - path: Cylinder153/Slice01/slice01/icingSliceBottom03
+        weight: 1
+      - path: Cylinder153/Slice01/slice01/SliceTop03
+        weight: 1
+      - path: Cylinder153/Slice01/sliceBottom03
+        weight: 1
+      - path: Cylinder153/Slice01/sliceMid03
+        weight: 1
+      - path: Cylinder153/Slice02
+        weight: 1
+      - path: Cylinder153/Slice02/icingSliceTop
+        weight: 1
+      - path: Cylinder153/Slice02/sliceBottom
+        weight: 1
+      - path: Cylinder153/Slice02/sliceMid
+        weight: 1
+      - path: Cylinder153/Slice02/sliceTop
+        weight: 1
+      - path: Cylinder153/Slice03
+        weight: 1
+      - path: Cylinder153/Slice03/icingSliceTop02
+        weight: 1
+      - path: Cylinder153/Slice03/sliceBottom02
+        weight: 1
+      - path: Cylinder153/Slice03/sliceBottom03 1
+        weight: 1
+      - path: Cylinder153/Slice03/sliceMid02
+        weight: 1
+      - path: Cylinder153/Slice04
+        weight: 1
+      - path: Cylinder153/Slice04/icingSliceTop04
+        weight: 1
+      - path: Cylinder153/Slice04/PsliceTop04
+        weight: 1
+      - path: Cylinder153/Slice04/sliceBottom04
+        weight: 1
+      - path: Cylinder153/Slice04/sliceMid04
+        weight: 1
+      - path: Cylinder153/Slice05
+        weight: 1
+      - path: Cylinder153/Slice05/icingSliceTop01
+        weight: 1
+      - path: Cylinder153/Slice05/sliceBottom01
+        weight: 1
+      - path: Cylinder153/Slice05/sliceMid01
+        weight: 1
+      - path: Cylinder153/Slice05/sliceTop01
+        weight: 1
+      - path: Cylinder153/Strawberry
+        weight: 1
+      - path: Cylinder153/Strawberry/transform33
+        weight: 1
+      - path: Cylinder153/Strawberry001
+        weight: 1
+      - path: Cylinder153/Strawberry001/transform31
+        weight: 1
+      - path: Cylinder153/Strawberry002
+        weight: 1
+      - path: Cylinder153/Strawberry002/transform32
+        weight: 1
+      - path: Cylinder153/Strawberry003
+        weight: 1
+      - path: Cylinder153/Strawberry003/transform30
+        weight: 1
+      - path: Cylinder153/teaCup
+        weight: 1
+      - path: Cylinder153/teaCup001
+        weight: 1
+      - path: Cylinder153/teaCup002
+        weight: 1
+      - path: Cylinder153/Teapot001
+        weight: 1
+      - path: Strawberries
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,262 @@
+~Created by Mark Duisters~
+
+All Content included in this package is protected by Unity's Asset Store UELA:
+http://unity3d.com/company/legal/as_terms
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+
+This document contains all the information about the variables and function in the LightShaft system.
+All materials, shaders and models on which the variables might refer to are provided in the package.
+
+
+How to use: Go to GameObjects-CreateOther-LightShafts and the system will spawn to at the editor's camera position.
+			Set a material and a mesh (both are delivered, but can be replaced by the user) in the correct slots and you are done.
+
+
+Video tutorials: (1.5 basic setup and new feature guide)
+				 http:http://www.youtube.com/watch?v=hTA6Ht8EWv0
+				
+		This video covers most of the written information below. (video refers to version 1.5). Although older videos are online (youtube) it is recommended to only watch them from
+		version 1.5 as allot of changes have been made to the gui/inspector and how the generator creates LightShafts.
+
+______________________________________________________________________________________________________________________________________________________________________________
+
+
+WARNINGS!		-Although this system can be used for mobile purposes, it is not recommended to use any high number of casts, as this can get
+				 allot on the overhead on a mobile device (keep a watch on the cast bar on top, a completely filled bar mostly means it will eat allot of performance).
+		  
+		  		-Your Sampled color source (Object that contains the sample texture) must have a mesh collider in order to access it's texture data for sampling.
+		  
+		  		-Prepare your textures for color sampling. If you have a window (or other texture source) of which you want the color to be sampled into the light shaft.
+		  		 Make sure you have set the Texture's import settings to Texture type = Advanced, Read/Write enabled.
+		  		 If you don't do this colors won't be sampled.
+		  		 
+		  		 "FALSE POSITIVE ERRORS:"
+		  		-I keep getting "Instantiating material due to calling renderer.material during edit mode. This will leak materials into the scene." 
+		  						"You most likely want to use renderer.sharedMaterial instead."  Error while in Editor mode.
+		  		 "Solution":
+		  		 Don not worry as this is a false positive, because each shaft changes its color trough sampling(or other settings, size/scaling) and needs a new material to 
+		  		 render it, SharedMaterial simply will not do the job as it uses only 1 material/color. Once you save your scene, it will clean up the lost materials "which are not lost". 
+		  		 Once in game the error won't show up as it is an "in editor only" problem.
+		  		
+______________________________________________________________________________________________________________________________________________________________________________
+		  		 
+
+-----------------------------------------------------------------------------------
+Unity and Unity Pro differences:
+
+Basically they are exactly the same, there is no Pro unique feature or content in this system.
+Why even bother writing this then?
+
+Well in unity pro you can use bloom and bloom&lensflare image effects, these image effects have access to the hdr
+buffer of the camera. when enabled with these image effects the light shafts/ray's will look very realistic' as a larger color range will become available.
+
+Why not make it pro only then?... Because Unity pro has enough of alternatives already (and post processing) and there is no feature like this in Unity(free)  
+itself. I simply needed a system that could create good looking light shafts for windows, holes in walls, etc. 
+and that did not require image effects or any pro features at all, but still could give lots of ambience and mood for my game.
+
+Why use it in Unity Pro if there are alternatives? Because this system will "mimic"(note mimic) volumetric light and will give a
+realistic and very ambient look from all angles.
+
+So in short the only difference Pro will make is giving more color depth, but this is not required at all to make
+amazing LightShafts.
+------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------
+I have no Gizmo folder for the Generator icon?
+
+Don't worry! the system will detect the missing folder create it and insert a fresh copy of the
+icon file inside the folder. Simply click outside of Unity and back into Unity to refresh your
+Asset list. There you go.
+------------------------------------------------------------------------------------
+
+
+
+
+
+~System explanation~
+
+____________________________________
+
+GeneratorExtension.js
+____________________________________
+
+WARNING! This script should be left alone at all costs, it controls the preview and inspector functionality of the generator.
+
+Classes:	-class GeneratorExtension extends Editor: Creates a plugin extension inside the generator script to
+			 support button features in the inspector.
+			 
+			-DeleteOldShafts: used to refresh the current system status with preview and delete or game start.
+
+
+Variables:	-var CurrentGenerator: Directs button functions to current selected system;
+
+			-var tmpCount: Counts the amount of Childs (shafts) to delete them by half on each click;
+					
+			-var LoadingString: tells you how far the progress is of casting the system.hot 
+			
+			-var VertCounter: Used for counting amount of vertices mesh inside the mesh slot.
+
+
+____________________________________
+
+LightShaftGenerator.js
+____________________________________
+(This is the heart of the system, all controls and setups from inspector come trough here.)
+
+Variables:
+			var Fase1:
+			var Fase2: All 3 fases are booleans used for the fold down menu, the generator is used for serialization so the tabs stay open the way the user left them.
+	 	    var Fase3:
+
+
+
+			var ShaftIntensity:brightness of the shaft.
+			var ShaftFalloff:how sharp light should be cut off. This can be very soft (fading will be noticeable) or sharp (like real light).
+
+			var ShaftColor:  Main color of the light, strength is determined by the alpha value
+			var ShaftWarmth: secondary color of the light, gets blended with the ShaftColor, strength is determined by the alpha value
+			    		 
+			var SampleColor: sample color behind the shaft and blend it in. (Only in machine builds, mobile builds cannot sample color 
+							 and are recommended to leave this off to prevent errors.)
+		
+			var StaticSample: Only sample one time. (If SampleColor is enabled).
+		
+			var SampleDistance: max distance to search for color influence. (If SampleColor is enabled).
+			
+			var StaticLightShafts: If enabled shafts will spawn with the distance set only once at startup. This will enable more batching trough unity
+								   because more shafts will be identical clones. A drawback is that light shafts no longer dynamically collide to objects in real time.
+								   They will collide however at startup to get the a 'baked' shape.
+
+
+			var SourceRange: If enabled, it well let the user use a LightSource for radius to be set as  MaxDistance.
+			var LightSource: Here goes the LightSource we want to use;
+		 
+			var MaxDistance: If SourceRange is disabled the user can manually set the a distance.
+
+			var LightShaftMaterial: Here goes the material for the light shaft system.
+			var LightShaftMesh: here goes the mesh used for the shaft's shape.
+			
+			var ShaftWidth the width for each shaft.
+			var ShaftSpace: the spacing between the next spawned shaft.
+			
+			var ShaftRowX: how many shafts should spawn on the X axis?
+			var ShaftRowY: how many shafts should spawn on the Y axis?
+			var ShaftRowZ: how many shafts should spawn on the Z axis?
+
+			
+
+			var RandomUpAngle: Rotates the shafts randomly over vertical axis.
+			var RandomWidthAngle: Rotates the shafts randomly over horizontal axis.
+			
+			var UpAngle: This value will cast the shafts at a given angle. Note that the cast direction
+				 is determined by the Z axis (blue arrow), so keep that in mind when giving in angles such as 45° or -45°.
+			var UpSpread: the spread of light in regular cast(vertical). 
+		    var WidthAngle: Does the same as UpAngle only on its width axis.
+			var WidtSpread: the spread of light in regular cast(horizontal).
+
+		
+
+
+			var mesh: The GeneratorExtension(editor script) will place the mesh the set mesh in here.
+			var CastMesh: Enable mesh casting or not.	(both these values are controlled trough the GeneratorExtension).
+		    var OutwardCast: Enables outward casting in the shape of the CastMesh.
+		    var BackCast: Enables back casting in the shape of the CastMesh, it will mimic the look of shafts coming from the sun or light source. Much like
+		    			  regular casting but in the shape of a mesh.
+		    var BackCast: Enables side casting in the shape of the CastMesh, it will mimic the look of shafts coming from the sun or light source. Much like
+		    			  regular casting but in the shape of a mesh.
+		    			  
+		    var MeshScale: Used to scale the cast shape in form of the mesh. This does not scale the mesh that is in the slot, it calculates with the placing of the
+		    			   shaft position so that the "cast shape" is scaled.
+		
+			var CastCylinder: Override regular casting and casts in a cylinder shape (number of shafts spawned will be the multiplication of all shaft rows);
+
+			var Vortex: deforms the current selected cylinder  into a vortex shape.
+
+			var CylinderRadius: The radius of the casted Cylinder (1 unit = 1m radius/total of 2m diameter);
+		   
+		
+			var Smooth: If enabled (only enable if more than 1 shaft is generated), the generator will
+			    rotate every shaft randomly over the z axis of the LightShaftPlane. This will
+			    eliminate grid illusions (also known as the moiré effect) between the shafts.
+		 	    
+		 	    
+			var AnimationOn(NewAnimation: enable animation mode
+			
+			var DynRot(New): (When Animation enabled) Call this variable in a script to the speed at which axis should rotate. 
+							  This animation is nativly supported by the generator and thus very performance friendly.
+					
+			var mobile: Enables or disables mobile optimization.
+		
+		
+Functions:	Start(): Executes the selected casting mode.
+
+			CastSystem(): Contains execution code for basic casting as well as shaft setup.
+			
+			function DeleteOldShafts(): Will run first in the Start() function to delete "preview" mode shafts or old ingame shafts.
+			
+			function CylinderCast():Creates a cylindrical cast out of the collected light shafts.
+			
+			function ConeCast(): Same as CylinderCast() but with an inner and outer radius.
+			
+			MeshCast(): Reads in the vertex data of the mesh set in the mesh slot. It uses this data to spawn
+							light shafts on the vertex location (scale has to be 1/1). All normal settings are applied except for the
+							shaft space value (this gets override by the vertex position).
+							
+			function OnDrawGizmos (): Draws the editor Gizmo in the scene.
+				
+
+____________________________________
+
+LightShaftScaling.js
+____________________________________
+(This script is completely controlled by the generator and should be left untouched).
+
+
+
+
+
+
+Variables:	var LightShaftPlane: The gameObject that will be scaled upon spawn (Set by the generator).
+
+		var MaxDistance: Maximum scaling distance (Set by the generator).
+
+		var SourceRange: Should the script search for a light source to set it's maximum distance (Set by the
+				 generator).
+
+		var LightSource: If SourceRange is enabled, it will search for a parent to find a lightsource, if not found it will check
+				 on the transform (shaft) itself, if yet not found it will call upon the LightSource slot
+				 to see if a GameObject is manually put in place.
+
+
+		
+		var SampleColor: Enable color sampling
+		
+		var StaticSample: only sample one time;
+		
+		var SampleDistance: set the distance to search for color samples
+		
+		var SampledColor: Do not edit this color value it is used by the system to feed a sampled color to the
+				  shader.
+
+
+functions:	function Start(): Executes only once if StaticSample is enabled.
+		
+		function Update (): Executes each frame the LightSource gameObject search and scaling of the transform.
+
+		function ColorSampler(): This function does the checkup whether a texture is readable or not,
+					 pulls the color data of the pixel it hit and feeds it trough the shader for
+					 blending with the other color components. This part is very sensitive
+					 as stated before do not edit this or you might get memory leaks into your game.
+
+
+____________________________________
+
+MenuButton.js
+____________________________________
+
+This script will add a button under GameObjects-CreateOther-LightShafts. If pressed it will spawn a generator object to where the camera is looking at.
+This removes the search and drag for the prefab as the generator is dynamically created from the menu now.

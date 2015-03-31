@@ -1,0 +1,256 @@
+Alzheimer Lightshafts 1.6.1(hotfix):
+
+-New scene demo, old one was corrupt.
+-Changed tool tip message for animation toggle.
+-Changed some lines in the manual.
+
+
+Alzheimer Lightshafts 1.6:
+
+-Removed old animation system: -per shaft rotation.
+							   -per generator rotation.
+ This old system used animation files, which where to performance intensive in large amounts.
+ 
+-New native supported animation. The shafts are now animated from within the source code, this is much more performance friendly and gives a more natural feel.
+-Set new animation speed. The speed of each rotation axis can be set.
+-Programmable animation. The animation speed can be changed throug scripting.
+-added new info to the manual.
+-Generator now spawns at the editor camera's location.
+
+
+
+Alzheimer Lightshafts 1.5.3.2(hotfix):
+
+-Fixed mesh bug (same as former update, now with the correct file).
+ You should now be able to correctly set the meshes in the required slot.
+
+
+
+Alzheimer Lightshafts 1.5.3.1(hotfix):
+
+-Fixed system crashing bug that prevented shaft meshes from loading.
+
+
+
+Alzheimer Lightshafts 1.5.3:
+
+
+Updates:	 	 Complete New Inspector Layout!
+				
+				-Reworked complete inspector so every variable goes trough the GeneratorExtension script.
+				-Added tooltips (extra text on hover over variable component) so the user gets extra information of the current function.
+				-Made some name/type changes to components in the LightShaftScaling script to support the new editor script setup.
+				-Moved shaft space variable under shaft width variable, these belong in the same category.
+				-Moved random up/width above up/width angle/spread to have a more logical layout.
+				-Editor script (GeneratorExtension)now handles the inspect in 3 phases: 1 cast selection/setup, 2 shaft settings, 3 optimization settings.
+				-Put all 3 phases in fold down menus. All settings the belong to their face can be hidden under the fold down. This gives a more stream lined layout and
+				 users can work in steps.
+				-Important material and mesh setup moved above the Phase setup fold menus. This is because these are the two crucial parts, without them the system
+				 will not function properly.
+				-Crucial parts of the setup are now market yellow.
+				-All slots now have a corresponding type, so no mistakes can be made anymore by placing a wrong type of object in a slot.
+								    
+				-Added mobile preset support. Users no longer have to manually change to source code to enable mobile support.
+				-Above update makes it possible to add a larger amount of shaft with the same performance.
+
+BugFixes: 		-If no hit was detected within the Maximum range shafts would shrink to unrealistic small sizes. Fixed: When no hit is detected
+				 the shafts will be properly given the MaxDistance as a scale.
+
+				-Falloff went haiwire when mobile build was enabled: Created two falloff types, automatically switches between settings in the background. Same option visible for user.
+
+
+
+
+
+Alzheimer Lightshafts 1.5.2:
+
+Updates:		-User can now set Falloff. With this the user able to set how sharp light should be cut off.
+				 This can be very soft (fading will be visible) or sharp (like real light).
+				-Updated the user Manual.
+				 
+				 
+BugFixes:		-Cone casting's shape was not correct.
+
+
+
+Alzheimer Lightshafts 1.5.1:
+
+Updates:		-Added Generator animation.
+				-Added per shaft animation.
+				-New Error log when AnimationOn is on but no animation is detected.
+				-Mesh cast now also supports all casting angles and spreads.
+				-added model to the player in example scene.
+
+
+Bugfixes:		-Collision detection tried to read texture of non readable objects: Added extra checkup to see if object has the correct collider and texture settings.
+
+
+Alzheimer Lightshafts 1.5:
+
+Updates:		-Added cone shape casting. This could be used for car lights, flashlights, etc.
+				-updated the manual.
+				-Removed SharedMaterial. Reason: When more than one system was in the scene, the sharedmaterial overrides all other settings of the independent systems.
+				 causing wrong color values to emerge and screw up the end results.
+				-Cylinder casts can now be morphed into a vortex shape.
+				-Added new debugging error messages.
+				-Regular casts spreading width can now be set.
+				-Regular cast  spreading up width can now be set.
+				-Renamed FixedXangle to UpAngle.
+				-Updated shaft texture settings to prevent hard texture edges.
+				-Completely removed animation support, there was no performance friendly way to animate mesh casted shafts.
+				-Normal (square) cast,ConeCast and cylinder cast can now be rotated in editor to fit casting direction.
+				-Removed the Cylinders 'wallcasting' options. Because of above updates this can now be set dynamically.
+				-Moved vortex casting under cylinder cast
+				-tweaked shaft texture (can be switched with custom one).
+				-Added all new systems to the editor preview function.
+				-New example scene.
+				-Created ambient audio for example scene.
+				-Renamed 'enable meshCast' to MeshCast.
+				-Baked most of the example scene's lighting to save memory.
+				
+
+Bugfixes: 		-Random up angle not showing
+				-Could not cast from dynamic angles. Fixed with the new system implementation (featured in the update list).
+				-Vortex not showing correctly.
+				-Inspector not working correctly. Fixed bug in menu script.
+
+
+
+
+Alzheimer Lightshafts 1.4.1.1:
+
+Hotfix: -Dissabled mesh animation untill a bether way is found to compute the positions.
+		-Fixed minor bug in generator script.
+
+
+
+Alzheimer Lightshafts 1.4.1:
+
+Updates:		-Performance update. When no real time color sample is selected all shafts will share their material.
+				 This is prevents the creation of multiple clone materials and has also an advantage in mobile builds.
+				 (Real time sampling can not be applied in mobile builds.)
+				 
+				-Updated Manual information.
+
+
+
+Alzheimer Lightshafts 1.4:
+
+Updates:		-Mesh casting. The user can now place a mesh for the system to use. Shafts will be spawned on every vertex position.
+			
+				-Mesh scaling (only applied to the position of the casted shafts, because no actual mesh is used).
+
+				-Added option toggle for outward casting on mesh cast.
+
+				-outward casting, this will cast rays in every direction of the mesh its vertices,thus shaping it in shaft form. (this will override, Random Up, Width and 
+				 Fixed Angle).
+				
+				-Back casting, This will mimic the light shafts from the sun or any light source in the shape of the selected mesh. Unlike Outward casting
+				 this won't override other settings except shaft space.
+				 
+				-Side casting, This will mimic the light shafts from the sun or any light source in the shape of the selected mesh. Unlike Outward casting
+				 this won't override other settings except shaft space.
+				 
+				-Animated mesh casting. (very intensive).
+				
+				-Renamed GeneratorPreview script to GeneratorExtension.js.
+				
+				-Updated manual with new info.
+				
+				-Cylinder casting  overrides shaft space value with its radius.
+				
+				-Fixed crash when making use of the new mesh system. Switched script lines to new locations.
+				
+				-New way of spawning the generator.
+				
+				-Added menu button under, GameObjects-Create Other-LightShafts.
+				
+				-Gizmo now derived from gizmo folder (automatically created on first spawn of the first generator).
+				
+				-Renamed LightShaftPlane to LightShaftMesh.
+				
+				
+				
+				
+
+
+
+
+Alzheimer Lightshafts 1.3:
+
+Updates:		-Changed delete shaft sets button to delete shafts 
+	
+				-The user can now press preview and it will automatically refresh the shafts.
+				
+				-Shafts are now childed under the subchild of the generator, this makes it possible for the delete button to delete all shafts at 
+				 once and for the preview button to refresh properly.
+				
+				-The generator refreshes the shafts when entering play mode to prevent double casting.
+				
+				-The systems deletes the current shafts spawned ingame when returning to edit mode, to view again inside the editor press the preview button.
+				
+				-MaxDistance is now called MaxCastDistance.
+				
+				-Added cylinder casting from the wall and cylinder casting from the roof or floor.
+				
+				-3 new select buttons for the type of cast you want.
+				
+				-Cylinder radius is now an inspector variable only visible when a cylinder type is selected.
+				
+				-Added label naming.
+				
+				-Added progress bar.
+				
+				-Added Serializing to the editor class for saving the editor toggle states.
+				
+				-Added multiple axis cylinder casting.(x,y,z).
+				
+				
+				
+				
+Alzheimer Lightshafts 1.2
+
+Updates:
+
+System upgrade!:	-New shader code: it doesn't use alpha channels any more, created new additive blending. This creates more realistic light colors.
+
+					-Added Intensity slider. This controls the new transparency and color brightness.
+					
+					- Editor previewing! Created editor buttons for previewing settings.
+										 no longer do you have to start up your whole scene to check out your shafts.
+										 This will make placing and editing the shafts much more convenient.
+					 
+					-Mobile support: because of above changes the system can be tweaked to run optimal on mobile devices.
+					
+					-Linux and OSX support: New shader can be run completely in OpenGL.
+					
+					-Made some changes to the interface of the inspector: new buttons, moved some variables from position to fit a more step to step workflow.
+					 It goes from color setup to casting in order.
+					 
+					-Updated manual with new explanations.
+					
+					-Added new screenshots to the store page.
+					
+
+
+Alzheimer Lightshafts 1.1
+
+Updates:
+
+-Cleaned up shader code.
+
+-Added new static shaft casting. The user can now specify if shafts are dynamic or not (they won't collide).
+ If they are static more of them can be batched and a higher number of casts can be used with little to no
+ memory impact.
+
+-Added new function explanation to the Manual.
+
+
+Bugfixes:
+
+-Shafts sometimes casted weird. fixed by reconfiguring the cast axis.
+
+
+Alzheimer Lightshafts 1.0
+
+-Release on Asset store.
